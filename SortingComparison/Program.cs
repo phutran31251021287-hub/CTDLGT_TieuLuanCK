@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Linq;
 using SortingComparison;
-/*Console.OutputEncoding = System.Text.Encoding.UTF8;
-foreach (DataType t in Enum.GetValues(typeof(DataType)))
+// Data generate
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+/*foreach (DataType t in Enum.GetValues(typeof(DataType)))
 {
     int[] a = DataGenerator.Generate(t, 20);
     Console.WriteLine(t.ToString().PadRight(15) + ": " + string.Join(", ", a));
@@ -11,6 +12,7 @@ int[] x = DataGenerator.Generate(DataType.Random, 1000, 1);
 int[] y = DataGenerator.Generate(DataType.Random, 1000, 1);
 Console.WriteLine("Cùng seed cho cùng dữ liệu: " + x.SequenceEqual(y));*/
 
+// Merge Sort
 // Test 1: ví dụ chạy tay trong giảng giải
 int[] demo = { 6, 5, 3, 1, 8, 7, 2, 4 };
 MergeSortAlgo.Sort(demo);
@@ -22,9 +24,7 @@ foreach (DataType t in Enum.GetValues(typeof(DataType)))
     int[] a = DataGenerator.Generate(t, 1000);
     int[] expected = (int[])a.Clone();
     Array.Sort(expected);                         // đáp án chuẩn
-
     MergeSortAlgo.Sort(a);
-
     bool ok = a.SequenceEqual(expected);
     Console.WriteLine(t.ToString().PadRight(15) + ": " + (ok ? "ĐÚNG" : "SAI")
         + " | so sánh = " + MergeSortAlgo.Comparisons
