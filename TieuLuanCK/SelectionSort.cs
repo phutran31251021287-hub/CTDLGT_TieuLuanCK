@@ -8,8 +8,7 @@ namespace SortingComparison
     {
         public static long Comparisons;
         public static long Moves;         
-
-        // Hàm công khai: chỉ cần gọi SelectionSortAlgo.Sort(mảng)
+        
         public static void Sort(int[] a)
         {
             Comparisons = 0;
