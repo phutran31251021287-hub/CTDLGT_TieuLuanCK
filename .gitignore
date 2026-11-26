@@ -1,9 +1,0 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/SortingComparison/bin/Debug/net10.0
-/SortingComparison/obj
-/.vs
-/SortingComparison/.vs/SortingComparison.slnx/FileContentIndex
-/SortingComparison/.vs/SortingComparison.slnx/v18
