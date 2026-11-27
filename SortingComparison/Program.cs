@@ -27,8 +27,8 @@ foreach (DataType t in Enum.GetValues(typeof(DataType)))
     MergeSortAlgo.Sort(a);
     bool ok = a.SequenceEqual(expected);
     Console.WriteLine(t.ToString().PadRight(15) + ": " + (ok ? "ĐÚNG" : "SAI")
-        + " | so sánh = " + MergeSortAlgo.Comparisons
-        + " | ghi = " + MergeSortAlgo.Moves);
+        + " So sánh = " + MergeSortAlgo.Comparisons
+        + " Ghi = " + MergeSortAlgo.Moves);
 }
 Console.WriteLine();
 // Test 3: trường hợp biên
@@ -41,3 +41,4 @@ Console.WriteLine("1 phần tử: " + one[0]);
 int[] allSame = { 5, 5, 5, 5, 5 };
 MergeSortAlgo.Sort(allSame);
 Console.WriteLine("Toàn bằng nhau: " + string.Join(", ", allSame));
+Console.WriteLine("So sánh= " + MergeSortAlgo.Comparisons + " Ghi= " + MergeSortAlgo.Moves);
